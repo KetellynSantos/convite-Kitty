@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Convite Kitty | HOME</title>
+</head>
+<body>
+    <header>
+        <img src="assets/icon/simbolo XO header.png" alt="Simbolo do TW">
+        <img src="assets/icon/menu-aberto.png" alt="Menu de hamburguer">
+    </header>
+
+    <main>
+        <section class="start">
+            <div class="main-text">
+                <span class="tw-insp">THE WEENKD INSPIRED</span>
+                <h1>KITTY</h1>
+                <h2 class="years"><span>20</span> anos</h2>
+                
+                <span class="niver">ANIVERSÁRIO DA KITTY</span>
+                <br>
+                <p class="textinho">
+                Venha comemorar esse novo ciclo comigo! Conto com você <3 
+                </p>
+            </div>
+        </section>
+
+        <section class="detalhe">
+
+            <h3 class="titulo-section">detalhe do evento</h3>
+
+             <div class="infos">
+
+        <!-- COLUNA 1 -->
+        <div class="info-item">
+
+            <img src="assets/icon/calendario 1.png" alt="Calendário">
+
+            <span class="title">DATA</span>
+
+            <h2>15/08</h2>
+
+            <span class="descricao">SÁBADO</span>
+
+        </div>
+
+        <!-- LINHA VERMELHA -->
+        <div class="divider"></div>
+
+        <!-- COLUNA 2 -->
+        <div class="info-item">
+
+            <img src="assets/icon/relogio 1.png" alt="Relógio">
+
+            <span class="title">HORÁRIO</span>
+
+            <h2 class="horario">18H ÀS 23H</h2>
+
+            <span class="descricao">
+                (6 DA TARDE ÀS 11 DA NOITE)
+            </span>
+
+        </div>
+
+        <!-- LINHA VERMELHA -->
+        <div class="divider"></div>
+
+        <!-- COLUNA 3 -->
+        <div class="info-item local-tamanho">
+
+            <img src="assets/icon/placeholder 1.png" alt="Local">
+
+            <span class="title">LOCAL</span>
+
+            <h2 class="local">RODÍZIO CROMA</h2>
+
+            <span class="descricao">
+                AV. SANTO ANTÔNIO, 1719 <br>
+                VILA OSASCO, OSASCO - SP
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- VALOR -->
+    <div class="valor">
+
+        <img src="assets/icon/melhor-preco 1.png" alt="Valor">
+
+        <p>VALOR: R$ 89,99 POR PESSOA</p>
+
+    </div>
+        </section>
+
+        <!--
+        -->
+        <section>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.740202147784!2d-46.777771099999995!3d-23.5418448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff729406abdb%3A0xccfd53805b92fe44!2sAv.%20Santo%20Ant%C3%B4nio%2C%201719%20-%20Vila%20Osasco%2C%20Osasco%20-%20SP%2C%2006083-215!5e0!3m2!1spt-BR!2sbr!4v1780085511807!5m2!1spt-BR!2sbr" class="mapa"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="convite">
+
+           <h3>VAI COM ACOMPANHANTE ?</h3>
+
+           <p class="texto-acompanhante">
+            Escolha se você está sozinha(o) ou acompanhada(o)
+        </p>
+
+          <a href="#sec-confirm">
+             <div class="botao">
+               <button class="bt1" id="btnSolo" type="button">
+                   <img src="assets/icon/do-utilizador 1.png">
+                <span>
+                    vou sozinha(o)
+                </span>
+            </button>
+          </a>
+           
+              <a href="#sec-confirm">
+                  <button class="bt2" id="btnCasal" type="button">
+                    <img src="assets/icon/casal 1.png">
+                <span>
+                    não estou
+                </span>
+            </button>
+              </a>
+         
+           </div>
+
+           <p class="texto-obs">
+
+            <span class="obs">OBS:</span>
+
+            Seu acompanhante já está na lista de convidados, essa informação é para fins de quantidades de confirmação e outros assuntos. Provavelmente não enviei para o seu acompanhante pois não tenho contato direto, mas sei do seu relacionamento.
+
+        </p>
+
+        </section>
+
+        <section class="confirmar-presenca hidden" id="sec-confirm">
+
+            <h3>CONFIRME SUA PRESENÇA</h3>
+
+            <p>
+                Preencha seus dados para entrar na lista.
+            </p>
+
+
+              <form id="formPresenca">
+
+        <!-- DADOS PRINCIPAIS -->
+        <div class="dados-principais">
+
+            <div class="input-group">
+
+                <label>SEU NOME</label>
+
+                <input type="text" id="nome" placeholder="Digite seu nome">
+ <span class="erro hidden" id="erroNome">
+                    Nome Inválido!
+                </span>
+            </div>
+
+            <div class="input-group">
+
+                <label>WHATSAPP</label>
+
+                <input type="text" id="whatsapp" placeholder="( 11 ) 9 9999-9999">
+
+                <span class="erro hidden" id="erroWhats">
+                    O número está inválido!
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- ACOMPANHANTE -->
+        <div class="dados-acompanhante hidden">
+
+            <div class="input-group">
+
+                <label>NOME DO ACOMPANHANTE</label>
+
+                <input type="text" id="nomeAcompanhante" placeholder="Digite o nome">
+                <span class="erro hidden" id="erroNomeAcomp">
+                    Nome Inválido!
+                </span>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>WHATSAPP DO ACOMPANHANTE</label>
+
+                <input type="text" id="whatsappAcompanhante" placeholder="( 11 ) 9 9999-9999">
+     <span class="erro hidden" id="erroWhatsAcomp">
+                    O número está inválido!
+                </span>
+            </div>
+
+        </div>
+
+        <button type="submit">
+            CONFIRMAR PRESENÇA
+        </button>
+
+    </form>
+
+        </section>
+
+        <div class="mensagem-sucesso hidden" id="mensagemSucesso">
+
+    Dados enviados com sucesso! 💋 <br>
+    Obrigada por confirmar presença no meu aniversário.
+</div>
+
+<section class="final">
+
+    <div class="aviso-final">
+
+        <div class="titulo-aviso">
+
+            <i class="fi fi-ss-star-christmas"></i>
+            <h3>
+                ATENÇÃO!</h3>
+
+        </div>
+
+        <p>
+            Sei que o valor é um pouco alto, por isso estou avisando
+            com antecedência para que todos possam se programar
+            com calma. Estou avisando desde agora para que você
+            tenha tempo de se organizar! Conto com você! ❤️
+        </p>
+
+    </div>
+
+    <div class="mensagem-final">
+
+        <h1>
+            XO, <span>Kitty</span>
+        </h1>
+
+        <p>
+            MAL POSSO ESPERAR POR ESSA NOITE. <br>
+            VAMOS RIR, DANÇAR E FAZER MEMÓRIAS <br>
+            QUE VÃO DURAR PRA SEMPRE.
+        </p>
+
+        <div class="linha-final"></div>
+
+        <span class="coracao">♡</span>
+
+    </div>
+
+</section>
+    </main>
+</body>
+</html>
