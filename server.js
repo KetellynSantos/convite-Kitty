@@ -10,7 +10,7 @@ app.use(cors());
 // Permite receber JSON
 app.use(express.json());
 
-// SERVE ARQUIVOS DA PASTA PUBLIC
+// SERVE ARQUIVOS DA PASTA PUBLIC - para acessar no Render
 app.use(express.static("public"));
 
 // Teste de conexão com banco
