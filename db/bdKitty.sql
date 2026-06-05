@@ -2,17 +2,16 @@ CREATE DATABASE niverKitty;
 use niverKitty;
 
 create table convidado (
-id_conv INT primary key auto_increment,
+id_conv SERIAL primary key auto_increment,
 nome_conv varchar(45),
 tel_conv char(15)
 );
 
-create table acompanhante (
-id_acom int primary key auto_increment,
-nome_acom varchar(45),
-tel_acom char(15),
-fkconvidado int,
-foreign key (fkconvidado) references convidado(id_conv)
+CREATE TABLE acompanhante (
+    id_acom SERIAL PRIMARY KEY,
+    nome_acom VARCHAR(45),
+    tel_acom VARCHAR(15),
+    fkconvidado INT REFERENCES convidado(id_conv)
 );
 
 SHOW TABLES;
