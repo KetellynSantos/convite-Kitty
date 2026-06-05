@@ -10,6 +10,9 @@ app.use(cors());
 // Permite receber JSON
 app.use(express.json());
 
+// SERVE ARQUIVOS DA PASTA PUBLIC
+app.use(express.static("public"));
+
 // Teste de conexão com banco
 conexao.connect((erro) => {
 
@@ -121,7 +124,9 @@ FROM convidado
 
 });
 
+const PORT = process.env.PORT || 3000;
+
 // Inicia o servidor
-app.listen(3000, () => {
-    console.log("Servidor rodando na porta 3000");
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
