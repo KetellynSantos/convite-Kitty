@@ -1,0 +1,28 @@
+{
+  "name": "convite-kitty",
+  "version": "1.0.0",
+  "description": "Uma landing page interativa criada para servir como convite digital de aniversário com inspiração visual no universo do The Weeknd.\r O projeto foi pensado exclusivamente para **mobile**, trazendo uma experiência moderna, imersiva e diferente dos convites tradicionais.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KetellynSantos/convite-Kitty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KetellynSantos/convite-Kitty/issues"
+  },
+  "homepage": "https://github.com/KetellynSantos/convite-Kitty#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.4"
+  }
+}

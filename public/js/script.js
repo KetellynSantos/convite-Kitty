@@ -21,11 +21,11 @@ form.addEventListener("submit", (event) => {
     //Impede o reload
      event.preventDefault()
 
-const nome = document.getElementById("nome").value
-const whatsapp = document.getElementById("whatsapp").value
+const nome = document.getElementById("nome").value.trim()
+const whatsapp = document.getElementById("whatsapp").value.trim()
 
-const nomeAcompanhante = document.getElementById("nomeAcompanhante").value
-const whatsappAcompanhante = document.getElementById("whatsappAcompanhante").value
+const nomeAcompanhante = document.getElementById("nomeAcompanhante").value.trim()
+const whatsappAcompanhante = document.getElementById("whatsappAcompanhante").value.trim()
 
 const erroNome = document.getElementById("erroNome")
 const inputNome = document.getElementById("nome")
@@ -61,23 +61,6 @@ if(nome.trim() !== "") {
       formularioValido = false
 }
 
-if(!acompanhante.classList.contains("hidden")) {
-
-convidado.acompanhante = {}
-if(nomeAcompanhante.trim() !== "") {
-    convidado.acompanhante.nome = nomeAcompanhante;
-   erroNomeAcomp.classList.add("hidden")
-   inputNomeAcomp.classList.remove("input-error")
-
-} else {
-
-    erroNomeAcomp.classList.remove("hidden")
-    inputNomeAcomp.classList.add("input-error")
-    formularioValido = false
-}
-
-}
-
 // VALIDAÇÕES DE NUMERO
 
 if (whatsapp.length === 11) {
@@ -92,7 +75,20 @@ if (whatsapp.length === 11) {
 
 if(!acompanhante.classList.contains("hidden")) {
 
-convidado.acompanhante = {}
+    convidado.acompanhante = {};
+
+    if(nomeAcompanhante.trim() !== "") {
+    convidado.acompanhante.nome = nomeAcompanhante;
+   erroNomeAcomp.classList.add("hidden")
+   inputNomeAcomp.classList.remove("input-error")
+
+} else {
+
+    erroNomeAcomp.classList.remove("hidden")
+    inputNomeAcomp.classList.add("input-error")
+    formularioValido = false
+}
+
 if(whatsappAcompanhante.length === 11) {
     convidado.acompanhante.whatsapp = whatsappAcompanhante;
     erroWhatsAcomp.classList.add("hidden")
@@ -105,15 +101,21 @@ if(whatsappAcompanhante.length === 11) {
 
 }
 
-console.log(whatsapp)
-console.log("Quantidade de num no zap: " + whatsapp.length)
-console.log("Quantidade de num no zap do acompanhante: " + whatsappAcompanhante.length)
 
+console.log(convidado)
 
 if(formularioValido) {
-    setTimeout(() => {
 
-        console.log(convidado)
+    fetch("http://localhost:3000/convidados", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(convidado)
+
+})
+
+    setTimeout(() => {
 
         form.reset()
 
@@ -140,6 +142,25 @@ if(formularioValido) {
             whatsapp: whatsappAcompanhante
         }
     }
+*/
+
+/*
+if(!acompanhante.classList.contains("hidden")) {
+
+convidado.acompanhante = {}
+if(nomeAcompanhante.trim() !== "") {
+    convidado.acompanhante.nome = nomeAcompanhante;
+   erroNomeAcomp.classList.add("hidden")
+   inputNomeAcomp.classList.remove("input-error")
+
+} else {
+
+    erroNomeAcomp.classList.remove("hidden")
+    inputNomeAcomp.classList.add("input-error")
+    formularioValido = false
+}
+
+}
 */
 })
 

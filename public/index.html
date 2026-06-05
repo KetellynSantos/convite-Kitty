@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icon/iconFlaticon.png" type="image/x-icon">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style/style.css">
     <script src="js/script.js" defer></script>
     <title>Convite Kitty | HOME</title>
@@ -11,7 +14,8 @@
 <body>
     <header>
         <img src="assets/icon/simbolo XO header.png" alt="Simbolo do TW">
-        <img src="assets/icon/menu-aberto.png" alt="Menu de hamburguer">
+        <div class="linhazinha"></div>
+        <!--<img src="assets/icon/menu-aberto.png" alt="Menu de hamburguer">-->
     </header>
 
     <main>
@@ -76,11 +80,11 @@
 
             <span class="title">LOCAL</span>
 
-            <h2 class="local">RODÍZIO CROMA</h2>
+            <h2 class="local">RODÍZIO Q´TAL</h2>
 
             <span class="descricao">
-                AV. SANTO ANTÔNIO, 1719 <br>
-                VILA OSASCO, OSASCO - SP
+                R. Emílio Carlos, 1257 <br>
+                 Vila Campesina, OSASCO - SP
             </span>
 
         </div>
@@ -92,15 +96,13 @@
 
         <img src="assets/icon/melhor-preco 1.png" alt="Valor">
 
-        <p>VALOR: R$ 89,99 POR PESSOA</p>
+        <p>VALOR: R$ 69.90 POR PESSOA</p>
 
     </div>
         </section>
 
-        <!--
-        -->
         <section>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.740202147784!2d-46.777771099999995!3d-23.5418448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff729406abdb%3A0xccfd53805b92fe44!2sAv.%20Santo%20Ant%C3%B4nio%2C%201719%20-%20Vila%20Osasco%2C%20Osasco%20-%20SP%2C%2006083-215!5e0!3m2!1spt-BR!2sbr!4v1780085511807!5m2!1spt-BR!2sbr" class="mapa"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.6159777951825!2d-46.762504299999996!3d-23.546310700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff5c9d0798bd%3A0xad74dffc44387e20!2sR.%20Dep.%20Em%C3%ADlio%20Carlos%2C%201257%20-%20Vila%20Campesina%2C%20Osasco%20-%20SP%2C%2006028-015!5e0!3m2!1spt-BR!2sbr!4v1780493963377!5m2!1spt-BR!2sbr" class="mapa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <section class="convite">
@@ -111,24 +113,24 @@
             Escolha se você está sozinha(o) ou acompanhada(o)
         </p>
 
-          <a href="#sec-confirm">
+          
              <div class="botao">
                <button class="bt1" id="btnSolo" type="button">
-                   <img src="assets/icon/do-utilizador 1.png">
+                   <i class="bi bi-person"></i>
                 <span>
-                    vou sozinha(o)
+                    Vou sozinha(o)
                 </span>
             </button>
-          </a>
+          
            
-              <a href="#sec-confirm">
+              <a href="#sec-confirm"></a>
                   <button class="bt2" id="btnCasal" type="button">
-                    <img src="assets/icon/casal 1.png">
+                    <i class="bi bi-people"></i>
                 <span>
-                    não estou
+                    Vou acompanhada
                 </span>
             </button>
-              </a>
+             
          
            </div>
 
@@ -210,6 +212,8 @@
             CONFIRMAR PRESENÇA
         </button>
 
+        <a href="confirmados.html"><p>VEJA OS CONFIRMADOS</p></a>
+
     </form>
 
         </section>
@@ -219,6 +223,99 @@
     Dados enviados com sucesso! 💋 <br>
     Obrigada por confirmar presença no meu aniversário.
 </div>
+
+<section class="presente">
+
+    <div class="title-pre">
+
+        <div class="title-presente">
+            <i class="bi bi-stars"></i>
+            <span>DICAS DE PRESENTE</span>
+            <i class="bi bi-stars"></i>
+        </div>
+
+        <p>
+            Não é obrigatório, mas se quiser me presentear,<br>
+            aqui vão algumas ideias que eu amaria ganhar!
+        </p>
+
+    </div>
+
+    <div class="cards">
+
+        <!-- CARD 1 -->
+
+        <div class="card-presente">
+
+            <i class="bi bi-heart"></i>
+            <h4>VESTIDOS</h4>
+
+            <img src="assets/img/vestidoMusa.jpg" alt="Vestidos">
+
+            <p>
+                Peças elegantes e
+                com personalidade.
+
+                - Vestido musa - M
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card-presente">
+
+            <i class="bi bi-heart"></i>
+
+            
+            <h4>ACESSÓRIOS</h4>
+            
+            <img src="assets/img/colar.png" alt="Acessórios">
+
+            <p>
+                Colares, brincos e detalhes
+                que fazem a diferença.
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card-presente">
+
+         <div class="iconepre">
+               <i class="bi bi-heart"></i>
+
+            <h4>MAQUIAGEM</h4>
+         </div>
+
+            <img src="assets/img/glossFran.jpg" alt="Maquiagem">
+
+            <p>
+                Produtos de beleza
+                são sempre bem-vindos.
+            </p>
+
+        </div>
+
+    </div>
+
+    <a href="listaPresente.html" class="btn-presentes">
+
+        <i class="bi bi-bag"></i>
+
+        VER LISTA COMPLETA
+
+        <i class="bi bi-arrow-right"></i>
+
+    </a>
+
+    <span class="texto-final">
+        Você será redirecionado para a página com todas as opções.
+    </span>
+
+</section>
+
 
 <section class="final">
 
