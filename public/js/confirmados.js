@@ -8,7 +8,7 @@ document.getElementById("listaConvidados");
 
 console.log(listaConvidados);
 
-fetch("http://localhost:3000/convidados")
+fetch("/convidados")
     .then(resposta => resposta.json())
     .then(dados => {
 
