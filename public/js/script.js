@@ -106,7 +106,7 @@ console.log(convidado)
 
 if(formularioValido) {
 
-    fetch("http://localhost:3000/convidados", {
+    fetch("/convidados", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
