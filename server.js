@@ -127,8 +127,29 @@ FROM convidado
 */
 
 conexao.connect()
-    .then(() => {
+    .then(async () => {
+
         console.log("Banco conectado com sucesso!");
+
+        await conexao.query(`
+            CREATE TABLE IF NOT EXISTS convidado (
+                id_conv SERIAL PRIMARY KEY,
+                nome_conv VARCHAR(45),
+                tel_conv VARCHAR(15)
+            );
+        `);
+
+        await conexao.query(`
+            CREATE TABLE IF NOT EXISTS acompanhante (
+                id_acom SERIAL PRIMARY KEY,
+                nome_acom VARCHAR(45),
+                tel_acom VARCHAR(15),
+                fkconvidado INT REFERENCES convidado(id_conv)
+            );
+        `);
+
+        console.log("Tabelas verificadas/criadas com sucesso!");
+
     })
     .catch((erro) => {
         console.log("Erro ao conectar:");
