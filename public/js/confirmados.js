@@ -27,6 +27,20 @@ fetch("/convidados")
 
             listaConvidados.appendChild(card);
 
+             if(convidado.nome_acom){
+
+        const cardAcompanhante =
+        document.createElement("div");
+
+        cardAcompanhante.classList.add("card-convidado");
+
+        cardAcompanhante.textContent =
+        convidado.nome_acom;
+
+        listaConvidados.appendChild(cardAcompanhante);
+
+    }
+
         });
 
     });

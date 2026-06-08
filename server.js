@@ -216,8 +216,7 @@ app.get("/convidados", async (req, res) => {
     try {
 
         const resultado = await conexao.query(`
-            SELECT id_conv, nome_conv
-            FROM convidado
+            select c.nome_conv, a.nome_acom from convidado c left join acompanhante as a on a.fkconvidado = c.id_conv;
         `);
 
         res.status(200).json(resultado.rows);
